@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<form>
+    <fields  name="filter" addfieldprefix="Hi3PHan\Component\QLSV\Administrator\Field" >
+        <field
+            name="search"
+            type="text"
+            label="Search"
+            default=""
+            description="Search By Name Student"
+            hint="Search"
+        />
+
+        <field
+                name="GioiTinh"
+                type="list"
+                default=""
+                label="Select Gender"
+                onchange="this.form.submit()"
+        >
+            <option value="">-Select Gender-</option>
+            <option value="Nam"> Nam</option>
+            <option value="Nữ"> Nu</option>
+        </field>
+
+        <field
+                name="Class"
+                type="list"
+                default=""
+                label="Select Class"
+                onchange="this.form.submit()"
+        >
+            <option value="">-Select Class-</option>
+            <option value="L01"> L01</option>
+            <option value="L02"> L02</option>
+            <option value="L03"> L03</option>
+            <option value="L04"> L04</option>
+            <option value="L05"> L05</option>
+        </field>
+
+    </fields >
+
+
+
+    <fields name="list">
+        <field
+            name="fullordering"
+            type="list"
+            label="Sort By"
+            onchange="this.form.submit()"
+            >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="Masv ASC">Mã sinh viên tăng dần</option>
+            <option value="Masv DESC">Mã sinh viên giảm dần</option>
+            <option value="Ngaysinh ASC">Ngày sinh tăng dần</option>
+            <option value="Ngaysinh DESC">Ngày sinh giảm dần</option>
+            <option value="Lop ASC">Lớp tăng dần</option>
+            <option value="Lop DESC">Lớp giảm dần</option>
+
+        </field>
+
+        <field
+                name="limit"
+                type="limitbox"
+                label="JGLOBAL_LIST_LIMIT"
+                default="20"
+                onchange="this.form.submit();"
+        />
+    </fields >
+
+</form>
+

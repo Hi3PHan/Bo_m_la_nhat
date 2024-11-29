@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="Masv" type="int" class="inputbox" size="40" label="Ma Sinh Vien" description="Nhập ma sinh vien ban muon xoa" />
+
+    </fieldset>
+</form>

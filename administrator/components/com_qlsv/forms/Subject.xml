@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fieldset>
+
+    <field name="Mamh" type="hidden" class="hidden" size="40" label="Mã môn học" description="Mã môn học" />
+    <field name="Tenmh" type="text" class="inputbox" size="40" label="Tên môn học" description="Tên môn học" />
+    <field name="DVHT" type="text" class="inputbox" size="40" label="Đơn vị học tập" description="Đơn vị học tập"/>
+
+</fieldset>
+</form>

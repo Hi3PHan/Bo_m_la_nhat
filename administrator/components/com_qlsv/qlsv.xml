@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="component" method="upgrade">
+    <name>COM_QLSV</name>
+    <author>Hi3PHan</author>
+    <creationDate>November 2024</creationDate>
+    <description>heloo</description>
+	
+	<namespace path="src/">Hi3PHan\Component\QLSV</namespace>
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>	
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>	
+	
+    <!-- User -->
+    <files folder="site">
+		<folder>forms</folder>
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+    </files>
+
+    <!-- Admin-->
+    <administration>
+		<menu link="option=com_QLSV">Quản lý Sinh Vien</menu>
+		<submenu>
+			<menu view="Students">Sinh vien</menu>
+			<menu view="Subjects">Mon hoc</menu>
+			<menu view="Results">Ket qua</menu>
+		</submenu>
+        <files folder="admin">
+			<folder>forms</folder>
+			<folder>language</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+<!--			dd bt
+-->
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+        </files>
+    </administration>
+
+	<!-- Media -->
+	<media folder="media" destination="com_QLSV">
+		<filename>joomla.asset.json</filename>
+		<folder>js</folder>
+		<folder>css</folder>
+	</media>
+</extension>

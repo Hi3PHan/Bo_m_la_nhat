@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="component" method="upgrade">
+	<name>COM_CRUDS</name>
+	<creationDate>10/4/2024</creationDate>
+	<author>Hi3Phan</author>
+	<authorEmail>Hi3Phan@email.com</authorEmail>
+	<authorUrl>http://localhost/joomla4.8</authorUrl>
+	<copyright>Hi3Phan</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<version>1.0.0</version>
+	<description>COM_CRUDS_XML_DESCRIPTION</description>
+	<namespace path="src">Joomla\Component\CRUDs</namespace>
+	<scriptfile>script.php</scriptfile>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>  <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<!-- Frond-end files -->
+	<files folder="site">
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+    <media folder="media/com_CRUDs" destination="com_CRUDs">
+		<folder>js</folder>
+    </media>
+	<!-- Back-end files -->
+	<administration>
+		<!-- Menu entries -->
+		<menu view="CRUDs">COM_CRUDS</menu>
+		<submenu>
+			<menu link="option=com_CRUDs">COM_CRUDS</menu>
+			<submenu>
+			<menu link="option=com_categories&amp;extension=com_CRUDs"
+				view="CRUDs" img="class:CRUDs-cat" alt="CRUDs/Categories">JCATEGORY</menu>
+			</submenu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>CRUDs.xml</filename>
+			<filename>config.xml</filename>
+			<folder>forms</folder>
+			<folder>language</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+		</files>
+	</administration>
+	<changelogurl>https://raw.githubusercontent.com/astridx/boilerplate/tutorial/changelog.xml</changelogurl>
+	<updateservers>
+		<server type="extension" name="CRUD Updates">https://raw.githubusercontent.com/astridx/boilerplate/tutorial/CRUD_update.xml</server>
+	</updateservers>
+	<dlid prefix="dlid=" suffix="" />
+</extension>

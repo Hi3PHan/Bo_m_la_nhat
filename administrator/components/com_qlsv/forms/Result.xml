@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="result" addfieldprefix="Hi3PHan\Component\QLSV\Administrator\Field">
+
+        <field name="id"
+               type="hidden"
+               class="hidden"
+               size="40"
+               label="Mã sinh viên"
+               description="Mã sinh viên" />
+
+        <field name="Masv"
+               type="student"
+               class="inputbox"
+               label="Mã sinh viên"
+               description="Chọn sinh viên"
+               >
+            <option value=""></option>
+        </field>
+
+        <field name="Mamh"
+               type="subject"
+               class="inputbox"
+               label="Mã môn học"
+               description="Chọn mã môn học"
+               >
+            <option value=""></option>
+        </field>
+
+        <field name="Diem"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="Điểm"
+               description="Nhập điểm"/>
+
+
+    </fieldset>
+</form>
